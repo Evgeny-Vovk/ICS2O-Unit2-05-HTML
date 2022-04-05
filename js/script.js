@@ -8,13 +8,13 @@
  */
 function calculate () {
   // input
-  const hours = parseInt(document.getElementById('hours-worked').value)
-  const rate = parseInt(document.getElementById('hourly-rate').value)
-  const taxes = 0.18
-
+  const TAXES = 0.18
+  const hours = parseFloat(document.getElementById('hours-worked').value)
+  const rate = parseFloat(document.getElementById('hourly-rate').value)
+  
   // process
-  const payment = (hours * rate) * (1 - taxes)
-  const government = (hours + rate) * taxes
+  const payment = (hours * rate) * (1 - TAXES)
+  const government = (hours * rate) * TAXES
 
   // output
   document.getElementById('payment').innerHTML = '<p>Your pay will be: $' + payment.toFixed(2) + '</p>'
