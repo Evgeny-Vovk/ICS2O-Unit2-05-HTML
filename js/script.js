@@ -6,7 +6,7 @@
 /**
  * This function calculates the payment you should get.
  */
-function calculate () {
+function calculate() {
   // input
   const TAXES = 0.18
   const hours = parseFloat(document.getElementById('hours-worked').value)
